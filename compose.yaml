@@ -1,0 +1,13 @@
+services:
+  be-sparepart-plating:
+    image: express-be
+    container_name: be-sparepart-plating
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5003:5003"
+    volumes:
+      - .:/app
+      - /app/node_modules
